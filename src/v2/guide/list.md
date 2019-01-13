@@ -336,7 +336,7 @@ vm.$set(this.userProfile, 'age', 27)
 때로는 `Object.assign()`이나 `_.extend()`를 사용해 기존의 객체에 새 속성을 할당할 수 있습니다. 이 경우 두 객체의 속성을 사용해 새 객체를 만들어야 합니다.
 
 ``` js
-Object.assign(this.userProfile, {
+Object.assign(vm.userProfile, {
   age: 27,
   favoriteColor: 'Vue Green'
 })
@@ -345,7 +345,7 @@ Object.assign(this.userProfile, {
 새로운 반응형 속성을 다음과 같이 추가합니다.
 
 ``` js
-this.userProfile = Object.assign({}, this.userProfile, {
+vm.userProfile = Object.assign({}, vm.userProfile, {
   age: 27,
   favoriteColor: 'Vue Green'
 })
